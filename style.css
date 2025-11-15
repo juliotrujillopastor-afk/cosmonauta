@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    margin: 0;
+    font-family: monospace;
+}
+
+#game-container {
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+#gameCanvas {
+    /* El borde inferior simula el suelo */
+    display: block;
+    border-bottom: 2px solid #333; 
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    color: #555;
+    z-index: 10;
+}
+
+#message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border: 2px solid #333;
+    /* Por defecto oculto hasta que se necesite */
+    display: none; 
+}
+
+#message.active {
+    display: block;
+}
+
+/* Estilo para el modo de juego terminado */
+#gameCanvas.game-over {
+    border-bottom: 2px dashed #999;
+}
